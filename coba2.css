@@ -135,7 +135,7 @@ body {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 1px;
+  width: 0px;
   background-color: black;
   left: 50%;
 }
@@ -175,10 +175,49 @@ body {
   padding: 10px;
   position: relative;
   border-radius: 8px;
+  background-color: white;
+}
+
+.timeline li .timeline-panel ::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid black;
+  border-right: 0 solid black;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel ::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-left: 14px solid white;
+  border-right: 0 solid white;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
 }
 
 .timeline li.timeline-inverted .timeline-panel {
   float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel ::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel ::after {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -14px;
+  right: auto;
 }
 
 .Gallery h1 {
@@ -275,4 +314,84 @@ footer a:hover {
 
 .Rsvp input {
   color: white;
+}
+
+/* media quarry */
+/* extra large */
+@media (max-width: 992px) {
+  .home {
+    transform: translateX(-50) translateY(45px);
+  }
+}
+
+/* laptop  */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  .timeline ::before {
+    left: 50px;
+  }
+  .timeline li .timeline-image {
+    left: 20px;
+    margin-left: 40px;
+    top: 15px;
+  }
+  .timeline li .timeline-panel {
+    width: calc((100%-200px));
+    float: right;
+  }
+
+  .timeline li .timeline-panel ::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel ::after {
+    border-left-width: 0;
+    border-right-width: 13px;
+    left: -13px;
+    right: auto;
+  }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .timeline li .timeline-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* handphone */
+
+@media (max-width: 576px) {
+  html {
+    font-size: 65%;
+  }
+
+  .timeline li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel ::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel ::after {
+    top: 31px;
+  }
 }
