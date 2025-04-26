@@ -135,7 +135,7 @@ body {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 0px;
+  width: 1px;
   background-color: black;
   left: 50%;
 }
@@ -178,7 +178,7 @@ body {
   background-color: white;
 }
 
-.timeline li .timeline-panel ::before {
+.timeline li .timeline-panel::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -190,7 +190,7 @@ body {
   right: -15px;
 }
 
-.timeline li .timeline-panel ::after {
+.timeline li .timeline-panel::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -206,14 +206,14 @@ body {
   float: right;
 }
 
-.timeline li.timeline-inverted .timeline-panel ::before {
+.timeline li.timeline-inverted .timeline-panel::before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
 
-.timeline li.timeline-inverted .timeline-panel ::after {
+.timeline li.timeline-inverted .timeline-panel::after {
   border-left-width: 0;
   border-right-width: 15px;
   left: -14px;
@@ -330,8 +330,8 @@ footer a:hover {
     font-size: 75%;
   }
 
-  .timeline ::before {
-    left: 50px;
+  .timeline::before {
+    left: 70px;
   }
   .timeline li .timeline-image {
     left: 20px;
@@ -343,14 +343,14 @@ footer a:hover {
     float: right;
   }
 
-  .timeline li .timeline-panel ::before {
+  .timeline li .timeline-panel::before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
   }
 
-  .timeline li .timeline-panel ::after {
+  .timeline li .timeline-panel::after {
     border-left-width: 0;
     border-right-width: 13px;
     left: -13px;
@@ -387,11 +387,11 @@ footer a:hover {
     transform: translateX(-20px);
   }
 
-  .timeline li .timeline-panel ::before {
+  .timeline li .timeline-panel::before {
     top: 30px;
   }
 
-  .timeline li .timeline-panel ::after {
+  .timeline li .timeline-panel::after {
     top: 31px;
   }
 }
